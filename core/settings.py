@@ -289,6 +289,9 @@ CSRF_TRUSTED_ORIGINS = [
 # Email (este es para cuando estamos en la etapa de construccion)
 # Con esta configuracion podremos mandar emails (esto envia el correo en consola)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Esto es parte del APIacces de ActiveCampaign
+ACTIVE_CAMPAIGN_KEY = os.environ.get("ACTIVE_CAMPAIGN_KEY")
+ACTIVE_CAMPAIGN_URL = os.environ.get("ACTIVE_CAMPAIGN_URL")
 
 
 # Con esto indicamos que cuando estemos en modo despliegue use esos dominios en caso contrario todos los dominios
