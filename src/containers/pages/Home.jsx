@@ -1,6 +1,7 @@
 // My components
 
 import { useEffect } from "react";
+import { animateScroll } from 'react-scroll';
 
 // home
 import BlogList from "components/home/BlogList";
@@ -18,7 +19,13 @@ import Layout from "hocs/layouts/Layout";
 
 const Home = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
+    animateScroll.scrollToTop({
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: 50
+    });
   }, []);
 
   return (

@@ -17,6 +17,8 @@ import Blog from "containers/pages/Blog";
 import Contact from "containers/pages/Contact";
 import Search from "containers/pages/Search";
 import PostDetail from "containers/pages/PostDetail";
+import OptIn from "containers/pages/OptIn";
+import OptInCTA from "containers/pages/OptInCTA";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -30,7 +32,7 @@ const AnimatedRoutes = () => {
         {/* Con * indicamos que si no existe mostramos a Error404 */}
 
         <Route path="*" element={<Error404 />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
         <Route path="/casos" element={<Cases />}></Route>
         <Route path="/servicios" element={<Services />}></Route>
         <Route path="/nosotros" element={<About />}></Route>
@@ -40,6 +42,8 @@ const AnimatedRoutes = () => {
         <Route path="/contacto" element={<Contact />}></Route>
         <Route path="/:term" element={<Search />}></Route>
         <Route path="/blog/:slug" element={<PostDetail />}></Route>
+        <Route path="/ebook" element={<OptIn />}></Route>
+        <Route path="/ebook/training" element={<OptInCTA />}></Route>
       </Routes>
     </AnimatePresence>
   );

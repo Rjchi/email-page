@@ -17,7 +17,6 @@ function Search({
   search_blog_page,
 }) {
   const {term} = useParams();
-  console.log(term);
 
   useEffect(() => {
     window.scrollTo(0, 0);
